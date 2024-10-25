@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Boys Hostel Shopping Site</title>
+</head>
+<body>
+    <header>
+        <h1>Boys Hostel</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="products">
+        <h2>Products</h2>
+        <div class="product" data-name="Maggie" data-price-bh1="13" data-price-bh2="15">
+            <img src="download.jfif" alt="Maggie">
+            <h3>Maggie</h3>
+            <p>Price: ₹<span class="price" id="maggie-price">13</span></p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Bourbon" data-price-bh1="13" data-price-bh2="15">
+            <img src="download (1).jfif" alt="Bourbon">
+            <h3>Bourbon</h3>
+            <p>Price: ₹<span class="price" id="bourbon-price">13</span></p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product" data-name="Lays" data-price-bh1="13" data-price-bh2="15">
+            <img src="download (2).jfif" alt="Lays">
+            <h3>Lays</h3>
+            <p>Price: ₹<span class="price" id="lays-price">13</span></p>
+            <button>Add to Cart</button>
+        </div>
+        <div id="order-modal" style="display:none;">
+            <div class="modal-content">
+                <span id="close-modal">&times;</span>
+                <h2>Enter Your Details</h2>
+                <form id="order-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" required>
+                    <label for="room">Room Number:</label>
+                    <input type="text" id="room" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>        
+    </main>
+
+    <section id="checkout" style="display: none;">
+        <h2>Checkout</h2>
+        <label for="hostel">Select your hostel:</label>
+        <select id="hostel">
+            <option value="BH1">BH1</option>
+            <option value="BH2">BH2</option>
+        </select>
+        <button id="proceed-to-pay">Proceed to Pay</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Boys Hostel Shopping Site</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
